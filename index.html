@@ -3,53 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borang Laporan Aktiviti Kokurikulum Generator</title>
+    <title>Borang Laporan Aktiviti Kokurikulum</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-
     <div class="container">
         <h1>Borang Laporan Aktiviti Kokurikulum</h1>
-
-        <form id="reportForm">
-            <label>Nama Pelapor:</label>
-            <input type="text" id="namaPelapor" required>
-
-            <label>Nama Aktiviti:</label>
-            <input type="text" id="namaAktiviti" required>
-
-            <label>Tarikh Aktiviti:</label>
-            <input type="date" id="tarikhAktiviti" required>
-
-            <label>Hari:</label>
-            <input type="text" id="hariAktiviti" required>
-
-            <label>Masa Aktiviti:</label>
-            <div class="time-container">
-                <input type="time" id="masaMula" required> hingga
-                <input type="time" id="masaTamat" required>
-            </div>
-
-            <label>Jumlah Kehadiran Murid:</label>
-            <input type="number" id="jumlahKehadiran" required>
-
-            <label>Muat Naik Gambar (4 keping):</label>
-            <div class="file-container">
-                <input type="file" class="imageUpload" accept="image/*">
-                <input type="file" class="imageUpload" accept="image/*">
-                <input type="file" class="imageUpload" accept="image/*">
-                <input type="file" class="imageUpload" accept="image/*">
-            </div>
-            <div id="imagePreview"></div>
-
-            <button type="button" id="generateReport">Jana Laporan (PDF)</button>
-        </form>
         
-        <footer>
-            <p>Made by Mohamad Adri bin Maili</p>
-            <p>SK Stalon 2025</p>
-        </footer>
+        <label for="namaPelapor">Nama Pelapor:</label>
+        <input type="text" id="namaPelapor" placeholder="Masukkan nama anda">
+
+        <label for="namaAktiviti">Nama Aktiviti:</label>
+        <input type="text" id="namaAktiviti" placeholder="Nama aktiviti">
+
+        <label for="tarikhAktiviti">Tarikh Aktiviti:</label>
+        <input type="date" id="tarikhAktiviti">
+
+        <label for="hariAktiviti">Hari:</label>
+        <input type="text" id="hariAktiviti" placeholder="Contoh: Isnin">
+
+        <label for="masaMula">Masa Aktiviti:</label>
+        <div class="time-container">
+            <input type="time" id="masaMula">
+            <span>hingga</span>
+            <input type="time" id="masaTamat">
+        </div>
+
+        <label for="jumlahKehadiran">Jumlah Kehadiran Murid:</label>
+        <input type="number" id="jumlahKehadiran" placeholder="Bilangan murid hadir">
+
+        <label>Muat Naik Gambar (4 keping maksima):</label>
+        <div class="image-upload">
+            <input type="file" class="imageUpload" accept="image/*">
+            <input type="file" class="imageUpload" accept="image/*">
+            <input type="file" class="imageUpload" accept="image/*">
+            <input type="file" class="imageUpload" accept="image/*">
+        </div>
+
+        <div id="imagePreview"></div>
+
+        <button id="generateReport">Jana Laporan</button>
+
+        <footer>Made by Mohamad Adri bin Maili - SK Stalon 2025</footer>
     </div>
 
     <script src="script.js"></script>
